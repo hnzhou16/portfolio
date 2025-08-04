@@ -1,26 +1,130 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --foreground-hover: #333333;
+  --secondary-foreground: #545454;
+  --accent: rgb(58, 175, 127);
+  --accent-hover: #e2f3df;
+  --accent-background: rgb(0, 109, 61);
+  --muted: rgb(204, 204, 204);
+  --border: #ffffff;
+  --card: #ffffff;
+  --card-background-1: #e4fbde;
+  --card-background-2: #ebe7de;
+  --card-background-3: #ecdcce;
+  --text-muted: #64748b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #0a0a0a;*/
+/*    --foreground: #ededed;*/
+/*    --muted: var(--muted-dark);*/
+/*    --border: var(--border-dark);*/
+/*    --card: var(--card-dark);*/
+/*    --text-muted: var(--text-muted-dark);*/
+/*  }*/
+/*}*/
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out;
+}
+
+/* Project card stacking animation */
+.project-card {
+  transition: all 0.3s ease-out;
+}
+
+/* Projects container for stacking effect */
+.projects-container {
+  position: relative;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .projects-container .project-card {
+    position: relative;
+    top: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+/* Focus styles for accessibility */
+input:focus,
+textarea:focus {
+  outline: 2px solid #000000;
+}
+
+/* Loading animation for skill bars */
+@keyframes skill-load {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--skill-width);
+  }
+}
+
+.skill-bar {
+  animation: skill-load 2s ease-out forwards;
 }
