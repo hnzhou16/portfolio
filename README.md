@@ -10,6 +10,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Update
 ```bash
+uncomment code in next.config
+
 cd portfolio
 git pull origin main
 npm run build # should export files in out dir

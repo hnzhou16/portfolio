@@ -1,7 +1,6 @@
 'use client';
 
 import {useEffect, useMemo, useState} from 'react';
-import Image from "next/image";
 import {usePathname, useRouter} from "next/navigation";
 import {nav} from "@/utils/classnames";
 
@@ -93,7 +92,7 @@ export default function Header() {
           <div
             onClick={() => router.push('/')}
             className="flex flex-row flex-shrink-0 items-center hover:cursor-pointer">
-            <Image src="/logo_hz.png" alt="logo" width={100} height={100} className={nav.logo}
+            <img src="/logo_hz.png" alt="logo" className={nav.logo}
                    onClick={() => router.push('/')}/>
             <p className="hidden md:flex text-sm font-bold text-muted">H A N G N I N G</p>
             <p className="hidden md:flex pl-2 text-sm font-bold text-muted">Z H O U</p>

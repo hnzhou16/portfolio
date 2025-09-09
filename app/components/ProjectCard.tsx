@@ -1,5 +1,4 @@
 import {btn, cn, layout, nav, typo} from "@/utils/classnames";
-import Image from "next/image";
 import {useRouter} from "next/navigation";
 
 interface ProjectCardProps {
@@ -45,7 +44,7 @@ export default function ProjectCard({project, index}: ProjectCardProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           <div className="relative h-64 lg:h-auto">
             <div className="w-full h-full flex items-center justify-center">
-              <Image src={project.image} alt="project image" width={300} height={300}
+              <img src={project.image} alt="project image"
                      className="w-fit lg:w-full object-cover"/>
             </div>
           </div>

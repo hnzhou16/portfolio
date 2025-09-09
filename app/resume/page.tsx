@@ -1,7 +1,6 @@
 "use client"
 
 import {btn, cn, layout} from "@/utils/classnames";
-import Image from "next/image";
 
 export default function Resume() {
   return (
@@ -11,13 +10,10 @@ export default function Resume() {
       <main className="flex-1 flex items-center justify-center p-4 sm:p-8">
         <div className={layout.section}>
           <div className="bg-card border border-border rounded-lg shadow-2xl overflow-hidden">
-            <Image
+            <img
               src="/resume_2025.png" // Add your resume image to public folder
               alt="Resume"
-              width={850}
-              height={1100}
               className="w-full h-auto"
-              priority
             />
           </div>
 

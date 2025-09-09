@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import Header from "./components/Header";
 import ProjectCard from "./components/ProjectCard";
 import {btn, cn, layout, nav, typo} from "@/utils/classnames";
@@ -69,11 +68,9 @@ export default function Home() {
               </button>
             </div>
             <div className="ml-10">
-              <Image
+              <img
                 src="/avatar.jpg"
                 alt="avatar"
-                width={600}
-                height={600}
                 className="min-w-[300px] object-cover rounded-full"
               />
             </div>
