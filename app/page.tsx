@@ -70,7 +70,7 @@ export default function Home() {
             </div>
             <div className="ml-10">
               <Image
-                src="/avatar.JPG"
+                src="/avatar.jpg"
                 alt="avatar"
                 width={600}
                 height={600}

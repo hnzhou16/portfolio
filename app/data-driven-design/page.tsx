@@ -2,7 +2,7 @@ import {cn, layout, typo} from "@/utils/classnames";
 import Image from "next/image";
 
 export default function DataDrivenDesign() {
-  const imgPrefix = "/Design Study_Page_";
+  const imgPrefix = "/design_study_page_";
 
   return (
     <div className="min-h-screen bg-background text-foreground mt-16">
