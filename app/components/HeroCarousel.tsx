@@ -84,7 +84,9 @@ export default function HeroCarousel() {
               }}
             >
               <video
-                ref={(el) => (videoRefs.current[i] = el)}
+                ref={(el) => {
+                  if (el) videoRefs.current[i] = el;
+                }}
                 src={src}
                 className={`w-full object-cover ${isActive ? "h-full" : "h-fit"}`}
                 muted
