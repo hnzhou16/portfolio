@@ -5,7 +5,7 @@ import ProjectCard from "./components/ProjectCard";
 import {btn, cn, layout, nav, typo} from "@/utils/classnames";
 import {projects, skillGroups} from "@/utils/content";
 import Link from "next/link";
-import {useState} from "react";
+import HeroCarousel from "@/app/components/HeroCarousel";
 
 export default function Home() {
   // const [name, setName] = useState('');
@@ -37,20 +37,22 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Header/>
 
+      <section id="home"></section>
+
+      <HeroCarousel />
+
       {/* About Section */}
-      <section id="about" className="mt-20 py-20 bg-background scroll-mt-16">
+      <section id="about" className="mt-0 pt-5 pb-20 bg-background scroll-mt-0">
         <div className={layout.section}>
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col justify-start max-w-4xl">
-              <h4 className={typo.h4}>Full-Stack Software Engineer | Computational Designer</h4>
+              <h4 className={typo.h4}>Full-Stack Software Engineer</h4>
               <h1 className={cn(typo.h1, "mb-3")}>HANGNING ZHOU</h1>
               <p className={cn(typo.p1, "mb-3")}>
                 <span className="font-bold">Full-Stack Software Engineer with a strong foundation in problem-solving, debugging, and systems thinking. </span>
-                With a background in architectural design and a long-standing interest in computational thinking,
-                I bring a unique blend of creativity and technical rigor to software engineering.
-                My transition into software development was driven by a deep passion for reasoning through complex
-                challenges and crafting efficient, scalable solutions. Known for sharp troubleshooting skills, I thrive
-                in collaborative, agile environments and am committed to building reliable, user-centered applications.
+                Drawing from a background in architectural design and computational methods, I bring a creative yet analytical approach to building software.
+                I specialize in crafting efficient, scalable applications that balance technical rigor with user-centered design.
+                Known for sharp troubleshooting skills and adaptability, I thrive in collaborative, agile environments where I can deliver reliable solutions that make an impact.
               </p>
               <button
                 onClick={() => scrollToSection('projects')}
@@ -67,7 +69,7 @@ export default function Home() {
                 </div>
               </button>
             </div>
-            <div className="ml-10">
+            <div className="w-90 ml-10">
               <img
                 src="/avatar.jpg"
                 alt="avatar"

@@ -11,7 +11,7 @@ export default function Resume() {
         <div className={layout.section}>
           <div className="bg-card border border-border rounded-lg shadow-2xl overflow-hidden">
             <img
-              src="/resume_2025.png" // Add your resume image to public folder
+              src="/resume_hz_2025.png" // Add your resume image to public folder
               alt="Resume"
               className="w-full h-auto"
             />
@@ -20,7 +20,7 @@ export default function Resume() {
           {/* Download Button */}
           <div className="flex flex-row justify-end mt-8">
             <a
-              href="/resume_2025.pdf"
+              href="/resume_hz_2025.pdf"
               download
               className={cn(btn.primary, "flex flex-row items-center w-fit")}
             >
